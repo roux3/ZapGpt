@@ -1,7 +1,7 @@
 import {create, Whatsapp} from "@wppconnect-team/wppconnect";
 import { Configuration, OpenAIApi } from "openai";
 const config = new Configuration({
-    apiKey: "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",
+    apiKey: "chave-api",
 })
 
 const openai = new OpenAIApi(config);
@@ -13,7 +13,7 @@ const run = async(pergunta) =>{
             max_tokens: 200,
             temperature: 0.6,
         });
-        console.log(resposta.data.choices[0].text)
+        
         return resposta.data.choices[0].text
     }
 }
