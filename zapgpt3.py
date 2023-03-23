@@ -1,5 +1,5 @@
 import openai
-openai.api_key = "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"
+openai.api_key = ""
 
 pergunta = ""
 
