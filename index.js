@@ -1,7 +1,7 @@
 import {create, Whatsapp} from "@wppconnect-team/wppconnect";
 import { Configuration, OpenAIApi } from "openai";
 const config = new Configuration({
-    apiKey: process.env.OPENAI_KEY,
+    apiKey: "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",
 })
 console.log(process.env.OPENAI_KEY)
 const openai = new OpenAIApi(config);
@@ -12,7 +12,7 @@ const run = async(pergunta) =>{
         const resposta = await openai.createChatCompletion({
             model: "gpt-3.5-turbo",
             messages: pergunta,
-            max_tokens: 200,
+            max_tokens: 500,
             temperature: 0.6,
         });
         
@@ -109,7 +109,7 @@ create(
 
         if(msg.body.toLowerCase().indexOf('/gpt') != -1){
             prompt.push({"role": "user", "content": msg.body.substr(4)})
-            console.log(prompt)
+          
             let resposta = await run(prompt)
 
 
