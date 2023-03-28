@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/vision": "^3.1.2",
     "@wppconnect-team/wppconnect": "^1.22.0",
     "chromium": "^3.0.3",
     "openai": "^3.1.0",
